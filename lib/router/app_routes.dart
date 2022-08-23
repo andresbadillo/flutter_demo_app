@@ -32,6 +32,11 @@ class AppRoutes {
         name: 'Card Screen',
         screen: const CardScreen(),
         icon: Icons.credit_card),
+    MenuOption(
+        route: 'avatar',
+        name: 'Circle Avatar',
+        screen: const AvatarScreen(),
+        icon: Icons.supervised_user_circle_rounded)
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
@@ -55,7 +60,7 @@ class AppRoutes {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     print(settings);
     return MaterialPageRoute(
-      builder: (context) => const AlertScreen(),
+      builder: (context) => const HomeScreen(),
     );
   }
 }

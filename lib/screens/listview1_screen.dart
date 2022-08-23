@@ -14,10 +14,9 @@ class ListView1Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-            child: Text(
+        title: const Text(
           'ListView Tipo 1',
-        )),
+        ),
       ),
       body: ListView(
         children: [

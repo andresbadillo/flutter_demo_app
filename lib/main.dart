@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:demo_app_components/screens/listview2_screen.dart';
+import 'package:demo_app_components/router/app_routes.dart';
+import 'package:demo_app_components/theme/app_theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,10 +12,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: ListView2Screen(),
+      //home: const ListView2Screen(),
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.getAppRoutes(),
+      onGenerateRoute: AppRoutes.onGenerateRoute,
+      theme: AppTheme.lighTheme,
     );
   }
 }

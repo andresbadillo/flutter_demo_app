@@ -18,7 +18,7 @@ class CardScreen extends StatelessWidget {
             CustomCardType2(
               imageUrl:
                   'https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-              name: 'Un hermosos paisaje',
+              name: 'Un hermoso paisaje',
             ),
             SizedBox(height: 10),
             CustomCardType2(

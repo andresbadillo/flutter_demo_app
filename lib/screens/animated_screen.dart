@@ -9,9 +9,14 @@ class AnimatedScreen extends StatefulWidget {
 }
 
 class _AnimatedScreenState extends State<AnimatedScreen> {
-  double _width = 50;
-  double _height = 50;
-  Color _color = Colors.indigo;
+  double _width = Random().nextInt(300).toDouble() + 70;
+  double _height = Random().nextInt(300).toDouble() + 70;
+  Color _color = Color.fromRGBO(
+    Random().nextInt(255),
+    Random().nextInt(255),
+    Random().nextInt(255),
+    1,
+  );
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(10);
 
   void onChangeShaped() {

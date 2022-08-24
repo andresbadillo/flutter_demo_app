@@ -33,6 +33,25 @@ class AppTheme {
         elevation: 0,
       ),
     ),
+
+    // TextFormField Theme
+    inputDecorationTheme: const InputDecorationTheme(
+      floatingLabelStyle: TextStyle(color: primary),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primary),
+        borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15), topRight: Radius.circular(15)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: primary),
+        borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15), topRight: Radius.circular(15)),
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15), topRight: Radius.circular(15)),
+      ),
+    ),
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(

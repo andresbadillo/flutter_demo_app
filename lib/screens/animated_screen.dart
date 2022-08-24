@@ -18,8 +18,15 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
     final random = Random();
     _width = random.nextInt(300).toDouble() + 70;
     _height = random.nextInt(300).toDouble() + 70;
-    _color = Colors.red;
-    _borderRadius = BorderRadius.circular(25);
+    _color = Color.fromRGBO(
+      random.nextInt(255),
+      random.nextInt(255),
+      random.nextInt(255),
+      1,
+    );
+    _borderRadius = BorderRadius.circular(
+      random.nextInt(100).toDouble() + 10,
+    );
 
     setState(() {});
   }
@@ -31,7 +38,9 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         title: const Text('Animated Container'),
       ),
       body: Center(
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOutBack,
           width: _width,
           height: _height,
           decoration: BoxDecoration(
